@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - TechCon 2024</title>
+    <style>
+        /* Basic responsive styling for the map - you'd move this to styles.css */
+        .map-container {
+            overflow: hidden;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            position: relative;
+            height: 0;
+            margin-bottom: 20px;
+        }
+        .map-container iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            border: 0;
+        }
+        form p {
+            margin-bottom: 15px;
+        }
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        form input[type="text"],
+        form input[type="email"],
+        form textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Include padding in width */
+        }
+        form textarea {
+            resize: vertical; /* Allow vertical resizing */
+            min-height: 100px;
+        }
+        form button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        form button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Contact Us</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contact-info">
+            <h2>Get in Touch</h2>
+            <p>We're here to help! Feel free to reach out to us with any questions or inquiries about TechCon 2024.</p>
+
+            <h3>General Inquiries</h3>
+            <p>Email: <a href="mailto:email@example.com">email@example.com</a></p>
+
+            <h3>Connect on Social Media</h3>
+            <p>Follow us on our social channels for the latest updates:</p>
+            <ul>
+                <li><a href="https://twitter.com/example" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                <li><a href="https://facebook.com/example" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                <li><a href="https://linkedin.com/company/example" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            </ul>
+        </section>
+
+        <section id="venue-location">
+            <h2>Conference Venue</h2>
+            <p>TechCon 2024 will be held at the Grand Convention Center, located in the heart of the city.</p>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.203023067824!2d-73.9982737845946!3d40.75797377932693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258532f3f4e3b%3A0x6b4c1a7e2b1d6e81!2sJacob%20K.%20Javits%20Convention%20Center!5e0!3m2!1sen!2sus!4v1717145711200!5m2!1sen!2sus"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Map of TechCon 2024 Venue">
+                </iframe>
+            </div>
+        </section>
+
+        <section id="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="submit_contact.php" method="post"> <p>
+                    <label for="userName">Name:</label>
+                    <input type="text" id="userName" name="userName" required>
+                </p>
+                <p>
+                    <label for="userEmail">Email:</label>
+                    <input type="email" id="userEmail" name="userEmail" required>
+                </p>
+                <p>
+                    <label for="userMessage">Message:</label>
+                    <textarea id="userMessage" name="userMessage" rows="5" required></textarea>
+                </p>
+                <p>
+                    <button type="submit">Send Message</button>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>copyright &copy; 2024 TechCon. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
